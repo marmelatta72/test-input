@@ -1,0 +1,10 @@
+<div>
+  <input
+    [type]="isPasswordVisible() ? 'text' : type"
+    [(ngModel)]="value"
+    (blur)="onTouched()"
+  />
+  <button *ngIf="type === 'password'" (click)="togglePasswordVisibility()">
+    {{ isPasswordVisible() ? 'Скрыть' : 'Показать' }}
+  </button>
+</div>
